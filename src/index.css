@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --deep-space: #030712;
+    --space-void: #010409;
+    --panel: #0B1120;
+    --panel-raised: #111C35;
+    --panel-border: rgba(56, 189, 248, 0.2);
+    --starlight: #FFFFFF;
+    --silver: #94A3B8;
+    --cyan: #00E5FF;
+    --ice: #38BDF8;
+    --cyan-glow: rgba(0, 229, 255, 0.25);
+    --font-head: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-body: "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --radius: 18px;
+    --tap: 44px;
+  }
+
+  body {
+    background-color: var(--deep-space);
+    color: var(--starlight);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-head {
+    font-family: var(--font-head);
+    letter-spacing: -0.025em;
+  }
+
+  .font-mono, code, kbd, samp {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Reduced motion support */
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* High contrast mode */
+.high-contrast {
+  --deep-space: #000000;
+  --panel: #050814;
+  --panel-raised: #0F172A;
+  --panel-border: rgba(255, 255, 255, 0.4);
+  --starlight: #FFFFFF;
+  --silver: #E2E8F0;
+  --cyan: #38BDF8;
+}
+
+.high-contrast * {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Custom cinematic scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #010409;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00E5FF;
+}
+
+.glow-cyan {
+  box-shadow: 0 0 30px -4px rgba(0, 229, 255, 0.35);
+}

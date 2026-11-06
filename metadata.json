@@ -1,0 +1,6 @@
+{
+  "name": "Built for a Question - Mission Remnants",
+  "description": "A scroll-driven journey through the machines NASA left on the Moon, Mars, and interstellar space, and the questions they were built to answer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
